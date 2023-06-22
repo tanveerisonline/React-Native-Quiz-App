@@ -1,1 +1,1 @@
-"# React-Native-Quiz-App" 
+This is a React Native Quiz App
