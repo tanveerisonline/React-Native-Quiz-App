@@ -9,22 +9,13 @@ export default function App() {
       <StatusBar style="auto" />
       <Text style={styles.title}>{question.question}</Text>
       <View style={styles.optionsContainer}>
-        <ImageOption
-          image={question.options[0].image}
-          text={question.options[0].text}
-        />
-        <ImageOption
-          image={question.options[1].image}
-          text={question.options[1].text}
-        />
-        <ImageOption
-          image={question.options[2].image}
-          text={question.options[2].text}
-        />
-        <ImageOption
-          image={question.options[3].image}
-          text={question.options[3].text}
-        />
+        {question.options.map((option) => (
+          <ImageOption
+            key={option.id}
+            image={option.image}
+            text={option.text}
+          />
+        ))}
       </View>
     </View>
   );
